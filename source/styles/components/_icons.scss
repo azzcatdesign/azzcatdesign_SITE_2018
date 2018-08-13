@@ -1,0 +1,150 @@
+/* Generated using nucleoapp.com */
+/* --------------------------------
+
+Icon colors
+
+-------------------------------- */
+:root {
+  --icon-color-primary: #111111;
+  --icon-color-secondary: inherit;
+
+  --icon-size-xs: 0.5em;
+  --icon-size-sm: 0.8em;
+  --icon-size-lg: 1.6em;
+  --icon-size-xl: 2em;
+}
+
+.icon {
+  display: inline-block;
+  /* icon primary color */
+  color: var(--icon-color-primary);
+  height: 1em;
+  width: 1em;
+}
+
+.icon use {
+  /* icon secondary color - fill */
+  fill: var(--icon-color-secondary);
+}
+
+.icon.icon--outline use {
+  /* icon secondary color - stroke */
+  stroke: var(--icon-color-secondary);
+}
+
+/* --------------------------------
+
+Change icon size
+
+-------------------------------- */
+
+.icon--xs {
+  height: var(--icon-size-xs);
+  width: var(--icon-size-xs);
+}
+
+.icon--sm {
+  height: var(--icon-size-sm);
+  width: var(--icon-size-sm);
+}
+
+.icon--lg {
+  height: var(--icon-size-lg);
+  width: var(--icon-size-lg);
+}
+
+.icon--xl {
+  height: var(--icon-size-xl);
+  width: var(--icon-size-xl);
+}
+
+/* -------------------------------- 
+
+Align icon and text 
+
+-------------------------------- */
+
+.icon-text-aligner {
+  /* add this class to parent element that contains icon + text */
+  display: flex;
+  align-items: center;
+}
+
+.icon-text-aligner .icon {
+  color: inherit;
+  margin-right: 0.4em;
+  flex-shrink: 0;
+}
+
+.icon-text-aligner .icon.icon--align-right {
+  margin-right: 0;
+  margin-left: 0.4em;
+}
+
+.icon-text-aligner .icon use {
+  color: inherit;
+  fill: currentColor;
+}
+
+.icon-text-aligner .icon.icon--outline use {
+  stroke: currentColor;
+}
+
+/* -------------------------------- 
+
+Icon reset values - used to enable color customizations
+
+-------------------------------- */
+
+.icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon.icon--outline {
+  fill: none;
+  stroke: currentColor;
+}
+
+.icon use {
+  stroke: none;
+}
+
+.icon.icon--outline use {
+  fill: none;
+}
+
+/* -------------------------------- 
+
+Stroke effects - Nucleo outline icons
+
+- 16px icons -> up to 1px stroke (16px outline icons do not support stroke changes)
+- 24px, 32px icons -> up to 2px stroke
+- 48px, 64px icons -> up to 4px stroke
+
+-------------------------------- */
+
+.icon--outline.icon--stroke-1 {
+  stroke-width: 1px;
+}
+
+.icon--outline.icon--stroke-2 {
+  stroke-width: 2px;
+}
+
+.icon--outline.icon--stroke-3 {
+  stroke-width: 3px;
+}
+
+.icon--outline.icon--stroke-4 {
+  stroke-width: 4px;
+}
+
+.icon--outline.icon--stroke-1 use,
+.icon--outline.icon--stroke-3 use {
+  -webkit-transform: translateX(0.5px) translateY(0.5px);
+  -moz-transform: translateX(0.5px) translateY(0.5px);
+  -ms-transform: translateX(0.5px) translateY(0.5px);
+  -o-transform: translateX(0.5px) translateY(0.5px);
+  transform: translateX(0.5px) translateY(0.5px);
+}

@@ -1,0 +1,182 @@
+// Using Plumer https://jamonserrano.github.io/plumber-sass/
+// First, we set up the plumer defaults.
+// 8px grid on which we'll layout site,
+// which becomes our base rem unit.
+
+:root {
+  font-size: 8px;  // grid height => 8px, font size => 16px
+
+  // Push underlines to below descenders.
+  // Not yet supported in all browsers, but
+  // a nicety where available.
+  text-underline-position: under; 
+
+  // Uncomment to show the grid
+  background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
+  background-size: 100% 8px;
+}
+
+body {
+  font-family: $body-font;
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+  font-family: $header-font;
+  font-weight: 400;
+}
+
+// Set our defaults base on above
+@include plumber-set-defaults(
+  $grid-height: 1rem,  // 8px
+  $baseline: $body-baseline,  // Bree Serif
+  $font-size: 2.25,  // 18px / 8px = 2.25 (fraction)
+  $line-height: 4,  // 4 * 8 = 32px (multiple of grid-height, integer)
+  $leading-top: 1,  // 1 * 1rem (multiple of grid-height, integer)
+  $leading-bottom: 2  // 2 * 1rem (multiple of grid-height, integer)
+);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+  font-family: $header-font;
+}
+
+// Set base text size to 18/32
+body {
+  @include plumber($baseline: $body-baseline);
+}
+
+// See http://type-scale.com/ for scale sizes (x2 for 8px grid).
+// Perfect Fifth 1.500
+
+// h1 size
+@mixin scale-h1 {
+  @include plumber(
+    $font-size: 10.126,
+    $line-height: 12
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 11.39175,
+      $line-height: 13
+    )
+  }
+}
+
+// h2 size
+@mixin scale-h2 {
+  @include plumber(
+    $font-size: 6.75,
+    $line-height: 7
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 7.59375,
+      $line-height: 8
+    );
+  }
+}
+
+// h3 size
+@mixin scale-h3 {
+  @include plumber(
+    $font-size: 4.5,
+    $line-height: 6
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 5.0625,
+      $line-height: 7
+    );
+  }
+}
+
+// h4 size
+@mixin scale-h4 {
+  @include plumber(
+    $font-size: 3,
+    $line-height: 5
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 3.375,
+      $line-height: 6
+    );
+  }
+}
+
+// h5, p body size
+@mixin scale-p {
+  @include plumber(
+    $font-size: 2.5,
+    $line-height: 4
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 2.8125,
+      $line-height: 5
+    )
+  }
+}
+
+// h6, smaller size
+@mixin scale-small {
+  @include plumber(
+    $font-size: 1.334,
+    $line-height: 3
+  );
+  @include for-tablet-landscape-up {
+    @include plumber(
+      $font-size: 1.50075,
+      $line-height: 4
+    );
+  }
+}
+
+h1,
+.h1 {
+  @include scale-h1;
+}
+
+h2,
+.h2 {
+  @include scale-h2;
+}
+
+h3,
+.h3 {
+  @include scale-h3;
+}
+
+h4,
+.h4 {
+  @include scale-h4;
+}
+
+h5,
+.h5 {
+  @include scale-p;
+}
+
+p,
+ol li,
+ul li {
+  @include scale-p;
+}
+
+h6,
+.h6 {
+  @include scale-small;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+

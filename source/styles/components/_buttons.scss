@@ -1,0 +1,32 @@
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg, 25%);
+  } 
+}
+
+.btn {
+ @extend %tac;
+ @extend %uc;
+ border-radius: .5rem;
+ color: $white;  
+ font-family: $header-font;
+ font-weight: 900;
+ font-size: 2em;
+ letter-spacing: 1px;
+ line-height: 1;
+ padding: 2rem;
+ text-decoration: none;
+}
+
+// Use your variable color(s) to replace $bg
+// and specify type of .btn-XXX
+/*
+.btn-XXX {
+   @include button-bg($bg);
+}
+*/

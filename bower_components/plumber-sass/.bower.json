@@ -1,0 +1,36 @@
+{
+  "name": "plumber-sass",
+  "description": "Easy baseline grids with SASS",
+  "main": "_plumber.scss",
+  "authors": [
+    "Viktor Honti"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "baseline-grid",
+    "vertical-rhythm",
+    "typography"
+  ],
+  "homepage": "https://github.com/jamonserrano/plumber-sass",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.7.7",
+  "_release": "0.7.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.7.7",
+    "commit": "3e5a0f8852a7f9c86e9eed91b2a1f17865fbaeb6"
+  },
+  "_source": "https://github.com/jamonserrano/plumber-sass.git",
+  "_target": "^0.7.7",
+  "_originalSource": "plumber-sass",
+  "_direct": true
+}

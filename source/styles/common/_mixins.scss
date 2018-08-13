@@ -1,0 +1,71 @@
+/** ASPECT RATIO
+  If you want a consistent look across different screen sizes you will find this aspect ratio mixin useful. It maintains the aspect ratio at any screen size. To use this mixin, you need two HTML elements: an outer and an inner one. The mixin calculates the aspect ratio of the two elements and maintains that at any resolution.
+*/
+@mixin aspect-ratio($width, $height) {
+   position: relative;
+   &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+   }
+   > .inner-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+   }
+}
+
+/** FULL WIDTH
+  Break out of parent container
+*/
+@mixin full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;  
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+
+/** CLEARFIX MIXIN FOR @INCLUDE
+  */
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/** CLEARFIX PLACEHOLDER FOR @EXTEND
+  */
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
