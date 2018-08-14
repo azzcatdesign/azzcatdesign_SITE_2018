@@ -13,8 +13,8 @@
  @extend %tac;
  @extend %uc;
  border-radius: .5rem;
- color: $white;  
- font-family: $header-font;
+ color: var(--white);  
+ font-family: var(--header-font);
  font-weight: 900;
  font-size: 2em;
  letter-spacing: 1px;

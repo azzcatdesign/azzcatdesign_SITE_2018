@@ -1,11 +1,11 @@
 // Using Plumer https://jamonserrano.github.io/plumber-sass/
-// First, we set up the plumer defaults.
-// 8px grid on which we'll layout site,
-// which becomes our base rem unit.
+// First, we set up the plumer defaults. 8px grid on which we'll
+// layout site, which becomes our base rem unit.
 
 :root {
-  font-size: 8px;  // grid height => 8px, font size => 16px
-
+  --font-size: 8px;
+  font-size: var(--font-size);  // grid height => 8px, font size => 16px
+  
   // Push underlines to below descenders.
   // Not yet supported in all browsers, but
   // a nicety where available.
@@ -17,7 +17,8 @@
 }
 
 body {
-  font-family: $body-font;
+  color: var(--text-color, red);
+  font-family: var(--body-font);
   font-weight: 200;
 }
 
@@ -27,7 +28,8 @@ h3,
 h4,
 h5,
 h6  {
-  font-family: $header-font;
+  color: var(--head-color);
+  font-family: var(--header-font);
   font-weight: 400;
 }
 
@@ -47,7 +49,7 @@ h3,
 h4,
 h5,
 h6  {
-  font-family: $header-font;
+  font-family: var(--header-font);
 }
 
 // Set base text size to 18/32
