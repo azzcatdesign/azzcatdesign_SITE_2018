@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+// Remove some of normalize's settings:
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap--header {
+  grid-area: header;
+  background: rgba(0,0,0,.05);
+}
+
+.wrap--intro {
+  grid-area: intro;
+  background: rgba(0,0,0,.1);
+}
+
+.wrap--portfolio {
+  grid-area: portfolio;
+  background: rgba(0,0,0,.15);
+}
+
+.wrap--footer {
+  grid-area: footer;
+  background: rgba(0,0,0,.2);
+}
+
+.wrap {
+  display: grid;
+  grid-template-areas: "header"
+                       "intro"
+                       "portfolio"
+                       "footer";
+}

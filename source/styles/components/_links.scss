@@ -1,0 +1,50 @@
+::focus {
+  outline-color: var(--link-color-normal);  
+}
+
+/*
+.brand__link {
+  display: block;
+  padding: 2rem;
+  &:hover {
+    background: var(--percent-40); 
+  }
+}
+*/
+
+//a:not(.brand__link) 
+// Animate Linke Underlines
+// http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+a:not(.brand__link):not(.button) {
+  color: var(--link-color-normal);
+  position: relative;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: var(--link-color-hover);     
+  }
+  &:visited {
+    color: var(--link-color-visited);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--link-color-hover);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out 0s;
+  }
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+a.button {
+  text-decoration: none;
+}
+

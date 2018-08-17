@@ -12,7 +12,7 @@
   text-underline-position: under; 
 
   // Uncomment to show the grid
-  background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
+  //background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
   background-size: 100% 8px;
 }
 
@@ -20,6 +20,12 @@ body {
   color: var(--text-color, red);
   font-family: var(--body-font);
   font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection  {
+  background: var(--logo-green-dark);
+  color: var(--white);
 }
 
 h1,

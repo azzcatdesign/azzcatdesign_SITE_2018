@@ -19,8 +19,9 @@
   --white: hsl(0, 0%, 100%);
   
   // Logo colors
-  --logo-green: hsl(63, 74%, 50%);
   --logo-gray: hsl(0, 0%, 59%);
+  --logo-green: hsl(63, 74%, 50%);
+  --logo-green-dark: hsl(63, 95%, 35%);
 
   // Font colors
   --text-color: var(--percent-30);
@@ -29,18 +30,20 @@
 
   // Link colors
   --link-color-normal: hsl(215, 55%, 54%);
-  --link-color-dark: hsl(215, 55%, 45%);
+  --link-color-hover: hsl(215, 65%, 35%);
+  --link-color-visited: hsl(215, 40%, 50%);
 }
 
 /*************************************/
 /** FONTS  */
 /*************************************/
+
 @import url("https://use.typekit.net/ozz6nup.css");
 // In case we want to speed things up, and use a system font for text.
 // See https://css-tricks.com/snippets/css/system-font-stack/
 
 // See https://jamonserrano.github.io/plumber-sass/baselines/
-// for baseline ratios.
+// for baseline ratios. Need to use SASS variables here.
 $body-baseline: 0.102000; // This ratio explicit to Bree Serif.
 $head-baseline: 0.204; // This ratio explicit to Bree.
 

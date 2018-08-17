@@ -1,4 +1,18 @@
 header {
-  @extend %debug;
-  //background: $percent_90;
+  padding: 0;
 }
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  .brand {
+    flex-basis: 14rem;
+    width: 14rem;
+  }
+}
+

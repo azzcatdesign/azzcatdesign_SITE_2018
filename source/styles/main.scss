@@ -11,7 +11,11 @@
 
 @import "components/buttons";
 @import "components/icons";
+@import "components/links";
+@import "components/lists";
 
+@import "layout/general";
 @import "layout/header";
-@import "layout/content";
+@import "layout/intro";
+@import "layout/portfolio";
 @import "layout/footer";
