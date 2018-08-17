@@ -2,7 +2,6 @@
   outline-color: var(--link-color-normal);  
 }
 
-/*
 .brand__link {
   display: block;
   padding: 2rem;
@@ -10,21 +9,17 @@
     background: var(--percent-40); 
   }
 }
-*/
 
 //a:not(.brand__link) 
 // Animate Linke Underlines
 // http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
-a:not(.brand__link):not(.button) {
+a:not(.brand__link):not(.button):not(.social__link) {
   color: var(--link-color-normal);
   position: relative;
   text-decoration: none;
   &:active,
   &:hover {
     color: var(--link-color-hover);     
-  }
-  &:visited {
-    color: var(--link-color-visited);
   }
   &:before {
     content: "";
@@ -42,6 +37,10 @@ a:not(.brand__link):not(.button) {
     visibility: visible;
     transform: scaleX(1);
   }
+}
+
+a:visited {
+  color: var(--link-color-visited);
 }
 
 a.button {
