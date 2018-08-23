@@ -1,7 +1,6 @@
 /*************************************/
 /** COLORS */
 /*************************************/
-
 :root {
   // Grays, as % of white
   --black: hsl(0, 0%, 0%);
@@ -22,7 +21,7 @@
   --logo-gray: hsl(0, 0%, 59%);
   --logo-green: hsl(63, 74%, 50%);
   --logo-green-dark: hsl(63, 95%, 35%);
-
+  
   // Font colors
   --text-color: var(--percent-30);
   --text-color-quiet: var(--percent-40);
@@ -33,6 +32,10 @@
   --link-color-hover: hsl(215, 65%, 35%);
   --link-color-visited: hsl(215, 40%, 50%);
 }
+
+// As variables for SASS pre-compiler use:
+$logo-green-dark: hsl(63, 95%, 35%);
+
 
 /*************************************/
 /** FONTS  */

@@ -1,18 +1,24 @@
-header {
+.wrap--header {
   padding: 0;
+  nav {
+    margin: 0 auto;
+    max-width: 75rem;
+    padding-right: 3rem;
+  }
 }
 .nav {
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
   li {
+    align-self: center;
     margin: 0;
     padding: 0;
   }
   .brand {
     flex-basis: 14rem;
-    width: 14rem;
   }
 }
 

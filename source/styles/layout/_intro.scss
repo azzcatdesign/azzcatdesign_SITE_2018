@@ -1,3 +1,76 @@
 [role="main"] {
-  //@extend %debugB;
+  padding: 0 3rem;
 }
+
+.intro {
+  margin: 0 auto;
+  max-width: 116rem;
+}
+
+.block--tldr {    
+  em {
+    font-weight: 400;
+  }
+  .cta {
+    margin: 0 auto;
+    max-width: 30rem;
+    img {
+      border: 1px solid var(--logo-green-dark);
+      border-bottom: none;
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+      display: block;
+      max-width: 100%; 
+    } 
+    .button {
+      display: block;
+    }
+    .button {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }  
+  @include for-tablet-portrait-up {
+    display: flex;
+    justify-content: space-between;    
+    .block--text {
+      flex-basis: 75%;
+      padding-right: 3rem;
+      text-align: right;
+    }
+    .cta {
+      margin: 0;
+    }
+    .avatar {
+      padding-top: 1rem;
+    }
+  }
+}
+
+.block--long-story {
+  //position: relative;
+}
+.pull-quote {
+  border: 2px dotted var(--logo-green-dark);
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 1rem 3rem;
+  position: relative;
+  em {
+    font-weight: 400;
+  }
+}
+@include for-tablet-portrait-up {
+  .pull-quote {
+    float: left;
+    position: relative;
+    margin-right: 3rem;
+  }    
+}
+@include for-desktop-up {
+  .pull-quote {
+    left: -15rem;
+    margin-right: -12rem;
+  }
+}
+
