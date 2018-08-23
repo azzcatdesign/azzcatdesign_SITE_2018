@@ -9,13 +9,13 @@
 
 .block--tldr {    
   em {
-    font-weight: 400;
+    font-weight: 300;
   }
   .cta {
     margin: 0 auto;
     max-width: 30rem;
     img {
-      border: 1px solid var(--logo-green-dark);
+      border: 1px solid var(--logo-green);
       border-bottom: none;
       border-top-left-radius: .5rem;
       border-top-right-radius: .5rem;
@@ -47,17 +47,14 @@
   }
 }
 
-.block--long-story {
-  //position: relative;
-}
 .pull-quote {
-  border: 2px dotted var(--logo-green-dark);
+  background: rgba($logo-green, .25);
   margin: 0 auto;
   max-width: 44rem;
-  padding: 1rem 3rem;
+  padding: 0 2rem;
   position: relative;
   em {
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 @include for-tablet-portrait-up {

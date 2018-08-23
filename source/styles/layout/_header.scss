@@ -13,7 +13,10 @@
   margin: 0;
   padding: 0;
   li {
+    @extend %uc;
     align-self: center;
+    font-weight: 300;
+    letter-spacing: 1px;
     margin: 0;
     padding: 0;
   }

@@ -9,14 +9,40 @@ body {
   padding: 0;
 }
 
+// Animated background color gradient:
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, 
+    var(--yellow-green-pale),
+    var(--blue-green-pale),
+    var(--blue-violet-pale),
+    var(--rosy-pink-pale));
+  background-size: 400% 400%;
+  animation: Gradient 10s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+  	
+		background-position: 0% 50%
+	}
+}
+
 .wrap--header {
   grid-area: header;
-  background: rgba(0,0,0,.05);
+  //background: rgba(0,0,0,.05);
 }
 
 .wrap--intro {
   grid-area: intro;
-  background: rgba(0,0,0,.1);
+  //background: rgba(0,0,0,.1);
 }
 
 .wrap--portfolio {
@@ -26,7 +52,7 @@ body {
 
 .wrap--footer {
   grid-area: footer;
-  background: rgba(0,0,0,.2);
+  //background: rgba(0,0,0,.2);
 }
 
 .wrap {

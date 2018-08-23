@@ -12,12 +12,12 @@
   text-underline-position: under; 
 
   // Uncomment to show the grid
-  background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
+  //background-image: linear-gradient(to top, rgba(242, 201, 76, 0.25) 0, rgba(242, 201, 76, 0.25) 1px, transparent 1px);
   background-size: 100% 8px;
 }
 
 body {
-  color: var(--text-color, red);
+  color: var(--text-color);
   font-family: var(--body-font);
   font-weight: 200;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ h5,
 h6  {
   color: var(--head-color);
   font-family: var(--header-font);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 // Set our defaults base on above
