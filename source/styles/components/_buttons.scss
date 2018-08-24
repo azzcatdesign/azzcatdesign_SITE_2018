@@ -12,6 +12,7 @@
 .button {
  @extend %tac;
  @extend %uc;
+ border: none;
  border-radius: .5rem;
  color: var(--white);  
  font-family: var(--header-font);
@@ -31,5 +32,10 @@
    &:hover {
      color: var(--white);
    }
+}
+
+.button--small {
+  font-size: 1em;
+  padding: 1rem;
 }
 

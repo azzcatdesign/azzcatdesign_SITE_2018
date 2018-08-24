@@ -10,9 +10,9 @@ body {
 }
 
 // Animated background color gradient:
-.wrap {
+body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(-45deg, 
     var(--yellow-green-pale),
     var(--blue-green-pale),
@@ -29,8 +29,7 @@ body {
 	50% {
 		background-position: 100% 50%
 	}
-	100% {
-  	
+	100% {  	
 		background-position: 0% 50%
 	}
 }
