@@ -1,5 +1,13 @@
-.wrap--footer {
-  
+.wrap--footer {  
+  background: linear-gradient(180deg,
+    var(--dusty-blue-violet),
+    var(--dusty-blue-violet-dark));
+  background-size: 100% 100%;
+  color: var(--percent-95);  
+  padding-top: 2rem;
+  @include for-tablet-landscape-up {
+    padding-top: 4rem;
+  }  
 }
 .antispam { 
   display:none;
@@ -12,12 +20,8 @@ input:focus + [role="tooltip"] {
 
 .wrap--contact {
   margin: 0 auto;
-  max-width: 116rem;
+  max-width: 80rem;
   padding: 0 3rem;
-  .contact {
-    background: rgba($logo-green, .25);
-    padding: 2rem;
-  }
 }
 
 .wrap--social {
@@ -32,7 +36,7 @@ input:focus + [role="tooltip"] {
     @extend %tac;
     flex-basis: 25%;
     a {
-      color: var(--dusty-blue-violet);
+      color: var(--percent-80);
       padding: 2rem;
       &:visited {
         color: var(--percent-50);
@@ -49,11 +53,9 @@ input:focus + [role="tooltip"] {
 }
 
 .wrap--colophon {
-  background: var(--dusty-blue-violet);
-  padding: 2rem 0;
+  padding: 0 0 2rem;
   p {
     @extend %tac;
-    color: var(--white);
-    
+    color: var(--percent-50);    
   }
 }

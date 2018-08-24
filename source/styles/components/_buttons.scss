@@ -13,7 +13,7 @@
  @extend %tac;
  @extend %uc;
  border: none;
- border-radius: .5rem;
+ border-radius: .25rem;
  color: var(--white);  
  font-family: var(--header-font);
  font-weight: 700;
@@ -29,6 +29,14 @@
 .button--green {
    @include button-bg($logo-green);
    color: var(--percent-40);
+   &:hover {
+     color: var(--white);
+   }
+}
+
+.button--green-dark {
+   @include button-bg($logo-green-dark);
+   color: var(--dusty-blue-violet-dark);
    &:hover {
      color: var(--white);
    }

@@ -139,12 +139,12 @@ body {
 // h6, smaller size
 @mixin scale-small {
   @include plumber(
-    $font-size: 1.334,
+    $font-size: 2,
     $line-height: 3
   );
   @include for-tablet-landscape-up {
     @include plumber(
-      $font-size: 1.50075,
+      $font-size: 2.25,
       $line-height: 4
     );
   }

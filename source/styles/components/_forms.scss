@@ -1,0 +1,21 @@
+.contact-form {
+  padding-top: 1rem;
+  label {
+    @extend %uc;
+    @include scale-small;        
+    display: block;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+  input,
+  textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--dusty-rose-light);
+    width: 100%;
+  }
+  .button {
+    margin: 2rem 0;
+    width: 100%;
+  }
+}

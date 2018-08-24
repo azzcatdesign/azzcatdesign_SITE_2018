@@ -47,3 +47,16 @@ a.button {
   text-decoration: none;
 }
 
+.link--reverse a:not(.brand__link):not(.button):not(.social__link) {
+  color: var(--dusty-rose-light);
+  &:visited {
+    color: var(--percent-80);
+  }
+  &:active,
+  &:hover {
+    color: var(--white);     
+  }
+  &:before {
+    background-color: var(--white);
+  }
+}

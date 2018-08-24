@@ -3,6 +3,12 @@
   transition: all .3s ease-in-out;
 }
 
+:focus {
+  outline-color: var(--logo-green);
+  outline-style: solid;
+  outline-width: medium;
+}
+
 // Remove some of normalize's settings:
 body {
   margin: 0;
