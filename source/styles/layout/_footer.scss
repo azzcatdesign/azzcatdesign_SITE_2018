@@ -38,6 +38,7 @@ input:focus + [role="tooltip"] {
     a {
       color: var(--percent-80);
       padding: 2rem;
+      transition: all .3s ease-in-out;
       &:visited {
         color: var(--percent-50);
       }

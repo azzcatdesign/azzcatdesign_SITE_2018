@@ -5,8 +5,11 @@
 .brand__link {
   display: block;
   padding: 2rem;
+  transition: all .3s ease-in-out 0s;
   &:hover {
     background: var(--percent-40); 
+    filter: sepia(1) hue-rotate(220deg) brightness(.77);
+
   }
 }
 
