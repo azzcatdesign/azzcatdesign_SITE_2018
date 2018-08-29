@@ -1,0 +1,79 @@
+.card {
+  //background: var(--percent-90);
+  border: 1px solid blue;
+  border-radius: .25rem;  
+}
+
+////////////////////////////
+
+.card {
+  position: relative;
+  min-width: 42rem; // 336px
+  min-height: 42rem;
+
+}
+.wrap--mask {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  // tweak the colors to be a little darker for this text element
+  --yellow-green-pale: hsl(115, 90%, 94%);
+  --blue-green-pale: hsl(163, 90%, 94%);
+  --blue-violet-pale: hsl(251, 90%, 94%);
+  --rosy-pink-pale: hsl(344, 90%, 94%);
+
+   height: 100%;
+   width: 100%;
+   background-image: url("../images/kolcraft_crib.jpg");
+/*
+   background: linear-gradient(-45deg, 
+    var(--yellow-green-pale),
+    var(--blue-green-pale),
+    var(--blue-violet-pale),
+    var(--rosy-pink-pale));
+*/
+   background-size: 120% 120%;
+   background-position: top right;
+   // Fluid Type
+   // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+   font-size: calc(56px + (150 - 56) * ((100vw - 320px) / (1440 - 320)));
+   font-weight: 700;
+   text-transform: uppercase;
+   text-align: center;
+   //line-height: 200px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding-top: 25%;
+   -webkit-background-clip: text;
+   color: transparent;
+   color: rgba(255,255,255,.5);
+   transition: all 2.5s ease-in-out;
+}
+
+.wrap--mask:hover .text {
+  background-size: 100% 100%;
+}
+
+.bg {
+   height: 100%;
+   width: 100%;
+   background-image: url("../images/kolcraft_crib.jpg");
+   //background-size: 100% 100%;
+   background-size: cover;
+   background-position: center;
+   transition: transform 2.5s ease-in-out;
+}
+
+.wrap--mask:hover .bg {
+  //background-size: 150% 150%;
+  transform: scale(1.2);
+}
