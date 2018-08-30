@@ -1,5 +1,4 @@
 .card {
-  //background: var(--percent-90);
   border: 1px solid blue;
   border-radius: .25rem;  
 }
@@ -23,39 +22,26 @@
 }
 
 .text {
-  // tweak the colors to be a little darker for this text element
-  --yellow-green-pale: hsl(115, 90%, 94%);
-  --blue-green-pale: hsl(163, 90%, 94%);
-  --blue-violet-pale: hsl(251, 90%, 94%);
-  --rosy-pink-pale: hsl(344, 90%, 94%);
-
    height: 100%;
    width: 100%;
    background-image: url("../images/kolcraft_crib.jpg");
-/*
-   background: linear-gradient(-45deg, 
-    var(--yellow-green-pale),
-    var(--blue-green-pale),
-    var(--blue-violet-pale),
-    var(--rosy-pink-pale));
-*/
    background-size: 120% 120%;
    background-position: top right;
+   color: rgba(255,255,255,.6);
    // Fluid Type
    // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-   font-size: calc(56px + (150 - 56) * ((100vw - 320px) / (1440 - 320)));
+   font-size: calc(42px + (120 - 42) * ((100vw - 320px) / (1440 - 320)));
    font-weight: 700;
    text-transform: uppercase;
    text-align: center;
-   //line-height: 200px;
+   line-height: 1;
+   padding-top: 8rem;
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%);
-   padding-top: 25%;
+   transform: translate(-50%, -50%);   
    -webkit-background-clip: text;
-   color: transparent;
-   color: rgba(255,255,255,.5);
+   background-clip: text;  
    transition: all 2.5s ease-in-out;
 }
 
@@ -67,13 +53,30 @@
    height: 100%;
    width: 100%;
    background-image: url("../images/kolcraft_crib.jpg");
-   //background-size: 100% 100%;
    background-size: cover;
    background-position: center;
    transition: transform 2.5s ease-in-out;
 }
 
+// https://stackoverflow.com/questions/27384684/background-transition-with-background-size-cover
 .wrap--mask:hover .bg {
   //background-size: 150% 150%;
   transform: scale(1.2);
+}
+
+.card__footer {
+  @extend %uc;
+  @extend %tac;
+  position: absolute;
+  bottom: 0;  
+  background: var(--dusty-blue-violet);
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: .5rem 0 1rem;
+  transition: all .3s ease;
+  width: 100%;
+  &:hover {
+    background: var(--dusty-rose);
+  }
 }

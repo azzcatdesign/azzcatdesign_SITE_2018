@@ -16,7 +16,7 @@
 //a:not(.brand__link) 
 // Animate Linke Underlines
 // http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
-a:not(.brand__link):not(.button):not(.social__link) {
+a:not(.brand__link):not(.button):not(.social__link):not(.link--card) {
   color: var(--link-color-normal);
   position: relative;
   text-decoration: none;
@@ -62,4 +62,10 @@ a.button {
   &:before {
     background-color: var(--white);
   }
+}
+
+a.link--card {
+  color: var(--white);
+  display: block;
+  text-decoration: none;
 }
