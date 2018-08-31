@@ -1,16 +1,10 @@
 .card {
-  border: 1px solid blue;
-  border-radius: .25rem;  
+  @extend %debugB;
+  border-radius: .25rem;
+  min-height: 42rem;  
+  position: relative;  
 }
 
-////////////////////////////
-
-.card {
-  position: relative;
-  min-width: 42rem; // 336px
-  min-height: 42rem;
-
-}
 .wrap--mask {
   overflow: hidden;
   position: absolute;
@@ -21,38 +15,47 @@
   height: 100%;
 }
 
-.text {
-   height: 100%;
-   width: 100%;
-   background-image: url("../images/kolcraft_crib.jpg");
-   background-size: 120% 120%;
-   background-position: top right;
-   color: rgba(255,255,255,.6);
-   // Fluid Type
-   // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-   font-size: calc(42px + (120 - 42) * ((100vw - 320px) / (1440 - 320)));
-   font-weight: 700;
-   text-transform: uppercase;
-   text-align: center;
-   line-height: 1;
-   padding-top: 8rem;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);   
-   -webkit-background-clip: text;
-   background-clip: text;  
-   transition: all 2.5s ease-in-out;
+.mask--text {
+  height: 100%;
+  width: 100%;
+  background-size: 120% 120%;
+  background-position: top right;
+  color: rgba(255,255,255,.6);  
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding-top: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   
+  -webkit-background-clip: text;
+  background-clip: text;  
+  transition: all 2.5s ease-in-out;
+  // For card grid width of 2:
+  &.text--large {
+    // Fluid Type
+    // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    font-size: calc(42px + (120 - 42) * ((100vw - 320px) / (1440 - 320)));
+  }
+  // For card grid width of 1:
+  &.text--med {
+    font-size: calc(42px + (52 - 42) * ((100vw - 320px) / (1440 - 320)));  
+  }
+  &.text--small {
+    font-size: calc(26px + (44 - 26) * ((100vw - 320px) / (1440 - 320)));  
+  }
 }
 
-.wrap--mask:hover .text {
+.wrap--mask:hover .mask--text {
   background-size: 100% 100%;
 }
 
 .bg {
    height: 100%;
-   width: 100%;
-   background-image: url("../images/kolcraft_crib.jpg");
+   width: 100%;   
    background-size: cover;
    background-position: center;
    transition: transform 2.5s ease-in-out;
@@ -60,8 +63,63 @@
 
 // https://stackoverflow.com/questions/27384684/background-transition-with-background-size-cover
 .wrap--mask:hover .bg {
-  //background-size: 150% 150%;
   transform: scale(1.2);
+}
+
+.kolcraft .mask--text,
+.kolcraft .bg {
+  background-image: url("../images/kolcraft_crib.jpg");  
+}
+
+.fff .mask--text,
+.fff .bg {
+  background-image: url("../images/fff_grab.jpg"); 
+}
+
+.cs_home .mask--text,
+.cs_home .bg {
+  background-image: url("../images/cs_home_sketch_grab.jpg");
+}
+
+.cs_business .mask--text,
+.cs_business .bg {
+  background-image: url("../images/cs_business_sketch_grab.jpg");
+}
+
+.cs_marketplace .mask--text,
+.cs_marketplace .bg {
+  background-image: url("../images/cs_marketplace_sketch_grab.jpg");
+}
+
+.wt_style_tiles .mask--text,
+.wt_style_tiles .bg {
+  background-image: url("../images/wt_style_grab.jpg");
+}
+
+.fff .bg:after,
+.cs_home .bg:after,
+.cs_business .bg:after,
+.cs_marketplace .bg:after,
+.wt_style_tiles .bg:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;  
+}
+.fff .bg:after {
+  background: rgba(0,0,0,.6);
+}
+
+.cs_home .bg:after,
+.cs_business .bg:after,
+.cs_marketplace .bg:after {
+  background: rgba(0,0,0,.4);
+}
+
+.wt_style_tiles .bg:after {
+  background: rgba(0,0,0,.2);  
 }
 
 .card__footer {
