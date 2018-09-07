@@ -96,11 +96,29 @@
   background-image: url("../images/wt_style_grab.jpg");
 }
 
+.wt_user_flows .mask--text,
+.wt_user_flows .bg {
+  background-image: url("../images/wt_user_flow.png");
+}
+
+.wt_mockups .mask--text,
+.wt_mockups .bg {
+  background-image: url("../images/wt_mockups_grab.jpg");
+}
+
+.es_brand .mask--text,
+.es_brand .bg {
+  background-image: url("../images/es_web.jpg");
+}
+
 .fff .bg:after,
 .cs_home .bg:after,
 .cs_business .bg:after,
 .cs_marketplace .bg:after,
-.wt_style_tiles .bg:after {
+.wt_style_tiles .bg:after,
+.wt_user_flows .bg:after,
+.wt_mockups .bg:after,
+.es_brand .bg:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -114,7 +132,10 @@
 
 .cs_home .bg:after,
 .cs_business .bg:after,
-.cs_marketplace .bg:after {
+.cs_marketplace .bg:after,
+.es_brand .bg:after,
+.wt_user_flows .bg:after,
+.wt_mockups .bg:after {
   background: rgba(0,0,0,.4);
 }
 

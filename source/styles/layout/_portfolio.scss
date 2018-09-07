@@ -2,11 +2,6 @@
   padding: 2rem 4rem;
 }
 
-.card__title {
-  @extend %tac;
-  margin: 0;
-}
-
 // The grid area names:
 .kolcraft {
   grid-area: kolcraft;
@@ -35,15 +30,6 @@
 .es {
   grid-area: es;
 }
-.w_site {
-  grid-area: w_site;
-}
-.w_developers {
-  grid-area: w_developers;
-}
-.w_andrea {
-  grid-area: w_andrea;
-}
 
 // Layout the grid
 .card {
@@ -56,12 +42,11 @@
   .wrap--cards {
     display: grid;
     grid-gap: 2rem 2rem;    
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "kolcraft kolcraft fff"
     "kolcraft kolcraft wt_style_tiles"
     "cs_home cs_business wt_style_tiles"
     "cs_marketplace cs_marketplace es"
-    "wt_user_flows wt_mockups wt_mockups"
-    "w_site w_developers w_andrea";
+    "wt_user_flows wt_mockups wt_mockups";
   }
 }
