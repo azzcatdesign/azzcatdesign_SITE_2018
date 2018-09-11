@@ -1,0 +1,32 @@
+.wrap--walker-tracker {
+  margin: 0 auto;
+  max-width: 180rem;
+  padding: 2rem 4rem;  
+  .wrap--image {
+    margin-top: 1.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.bkgd.wrap--flex {
+  @include for-tablet-portrait-up {
+    display: flex;
+    justify-content: center;
+  }
+  .wrap--image {
+    flex-basis: 50%;
+    margin-right: 4rem;
+  }
+  p {
+    flex-basis: 50%;
+  }
+  @include for-desktop-up {
+    .wrap--image {
+      flex-basis: 40%;
+    }
+    p {
+      flex-basis: 60%;
+    }
+  }
+}

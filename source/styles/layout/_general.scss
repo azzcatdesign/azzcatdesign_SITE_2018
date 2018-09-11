@@ -56,10 +56,13 @@ body {
   grid-area: footer;
 }
 
-.wrap {
-  display: grid;
-  grid-template-areas: "header"
-                       "intro"
-                       "portfolio"
-                       "footer";
+// Only grid on body.home (index.html)
+.home {
+  .wrap {
+    display: grid;
+    grid-template-areas: "header"
+                         "intro"
+                         "portfolio"
+                         "footer";
+  }
 }
