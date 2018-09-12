@@ -12,9 +12,8 @@
 
   }
 }
-
-//a:not(.brand__link) 
-// Animate Linke Underlines
+ 
+// Animate Link Underlines
 // http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 a:not(.brand__link):not(.button):not(.social__link):not(.link--card):not(.link--sample) {
   color: var(--link-color-normal);
@@ -50,7 +49,7 @@ a.button {
   text-decoration: none;
 }
 
-.link--reverse a:not(.brand__link):not(.button):not(.social__link) {
+.link--reverse a:not(.brand__link):not(.button):not(.social__link):not(.link--card):not(.link--sample) {
   color: var(--dusty-rose-light);
   &:visited {
     color: var(--percent-80);

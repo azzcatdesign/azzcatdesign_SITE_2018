@@ -1,32 +1,113 @@
+// Animate the 'Case Study' span
+// Thanks to https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load#12638711
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header--wt {  
+  h1 {
+    @include scale-h2;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    @include for-tablet-landscape-up {
+      padding-top: 0;
+    }        
+  }
+  .opening,
+  .middle {
+    display: block;
+  }
+  .opening,
+  .middle,
+  .closing {
+    padding: 0 4rem;  
+  }
+  .opening,
+  .closing {
+    @extend %uc;
+    @include scale-h4;
+    background: var(--dusty-blue);
+    color: var(--white);    
+    font-family: var(--body-font);
+    font-weight: 300;
+    letter-spacing: 1px;    
+  }
+  .opening {
+    animation: 1s ease-out .5s 1 slideInFromLeft;
+    margin-top: 0;    
+  }
+  .closing {
+    animation: 1s ease-out .5s 1 slideInFromRight;
+    margin-top: .5rem; 
+  }
+  @include for-tablet-landscape-up {
+    .opening,
+    .closing {
+      padding-bottom: 1rem;
+    }
+  }
+  // Match the left margin of content with calc b/c
+  // we can't use max-width w/o ruining the animations.
+  @include for-big-desktop-up {
+    .opening,
+    .closing,
+    .middle {
+      padding-left: calc((100vw - 1376px) / 2);
+    }
+  } 
+}
+
 .wrap--walker-tracker {
   margin: 0 auto;
   max-width: 180rem;
-  padding: 2rem 4rem;  
+  padding: 2rem 4rem;
+}
+.wrap--bkgd {
+  @include clearfix;
   .wrap--image {
-    margin-top: 1.5rem;
-    img {
-      max-width: 100%;
+    margin-top: 1.5rem;    
+    @include for-tablet-portrait-up {
+      float: left;
+      margin-right: 4rem;
+      max-width: 40rem;
+    }
+    @include for-tablet-landscape-up {
+      max-width: 60rem;
     }
   }
 }
-.bkgd.wrap--flex {
-  @include for-tablet-portrait-up {
-    display: flex;
-    justify-content: center;
+.wrap--walker-tracker {
+  .wrap--flex {
+    @include for-tablet-landscape-up {
+      display: flex;
+      justify-content: space-between;
+      .flex-item {
+        flex-basis: 50%;
+        &:first-child {
+          margin-right: 4rem;  
+        }
+      }
+    } 
   }
-  .wrap--image {
-    flex-basis: 50%;
-    margin-right: 4rem;
-  }
-  p {
-    flex-basis: 50%;
-  }
-  @include for-desktop-up {
-    .wrap--image {
-      flex-basis: 40%;
-    }
-    p {
-      flex-basis: 60%;
-    }
-  }
+  
 }
