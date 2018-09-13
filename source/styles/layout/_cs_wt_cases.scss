@@ -23,7 +23,7 @@
   }
 }
 
-.header--wt {  
+.header--case-study {  
   h1 {
     @include scale-h2;
     line-height: 1;
@@ -78,7 +78,7 @@
   } 
 }
 
-.wrap--walker-tracker {
+.wrap--case-study {
   margin: 0 auto;
   max-width: 180rem;
   padding: 2rem 4rem;
@@ -97,7 +97,7 @@
     }
   }
 }
-.wrap--walker-tracker {
+.wrap--case-study {
   .wrap--flex {
     @include for-tablet-landscape-up {
       display: flex;
@@ -109,6 +109,5 @@
         }
       }
     } 
-  }
-  
+  } 
 }
